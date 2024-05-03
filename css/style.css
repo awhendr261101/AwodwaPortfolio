@@ -8,7 +8,8 @@
 
 :root{
     --body: navy;
-    --headerAndFooter: grey;
+    --headerAndFooter: black;
+    --secondary: white;
 
 }
 
@@ -34,4 +35,21 @@
     syntax: "<percentage>";
     inherits: false;
     initial-value: 0%;
+}
+/* Navbar */
+img[alt="logo"]{
+    aspect-ratio: 1/1;
+    width: 5rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Navbar&Footer */
+
+:is(.navbar, footer){
+    background-color: var(--headerAndFooter);
+}
+
+:is(.nav-link){
+    color: var(--secondary);
 }
