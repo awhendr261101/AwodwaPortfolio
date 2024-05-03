@@ -10,6 +10,7 @@
     --body: navy;
     --headerAndFooter: black;
     --secondary: white;
+    --fav: #4F77A9 ;
 
 }
 
@@ -47,9 +48,28 @@ img[alt="logo"]{
 /* Navbar&Footer */
 
 :is(.navbar, footer){
-    background-color: var(--headerAndFooter);
+    background-color: var(--fav);
 }
 
 :is(.nav-link){
     color: var(--secondary);
+}
+
+/* Grid layout */
+:is(body){
+    display: grid;
+    text-align: center;
+
+}
+/* Create 3 rows */
+:is(body){
+    grid-template-rows: auto minmax(100%,100dvh) auto;
+}
+
+a{
+    transition: all .5s;
+    &:hover{
+        transform: scale(1.2);
+        text-decoration: underline;
+    }
 }
